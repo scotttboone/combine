@@ -4,9 +4,9 @@
 #endif
 
 setenv CDATE 20050101   # $1         # YYYYMMDD e.g. 20011215
-setenv JDATE 2005001    # $2         # YYYYJJJ e.g. 2001349
-setenv NDAYS 1          # $3         # e.g. 5 for 5 days
-setenv CASE DDM_99_1    # $4
+setenv JDATE 2005002    # $2         # YYYYJJJ e.g. 2001349
+setenv NDAYS 6          # $3         # e.g. 5 for 5 days
+setenv CASE DDM_99_$1 #
 setenv PERIOD NULL      # $5
 setenv SRUN NULL        # $6
 setenv MONTHNAME NULL   # $7
@@ -42,7 +42,7 @@ setenv INFILE1 $OUTDIR/$AFILE.$CASE.ASENS.$JDATE.ncf
 setenv OUTFILE $POSTDIR/$AFILE.$CASE.ASENS.$JDATE.combine.ncf
 if (-e $OUTFILE) /bin/rm $OUTFILE
 
-setenv SPECIES_DEF $DIR/species_def.conc
+setenv SPECIES_DEF $DIR/species_def-${1}.conc
   
 $DIR/combine.exe
 
