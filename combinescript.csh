@@ -4,7 +4,7 @@
 #endif
 
 setenv CDATE 20050101   # $1         # YYYYMMDD e.g. 20011215
-setenv JDATE 2005002    # $2         # YYYYJJJ e.g. 2001349
+setenv JDATE $2         # YYYYJJJ e.g. 2001349
 setenv NDAYS 6          # $3         # e.g. 5 for 5 days
 setenv CASE DDM_99_$1 #
 setenv PERIOD NULL      # $5

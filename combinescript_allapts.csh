@@ -4,7 +4,7 @@
 #endif
 
 setenv CDATE 20050101   # $1         # YYYYMMDD e.g. 20011215
-setenv JDATE $2         # YYYYJJJ e.g. 2001349
+setenv JDATE $1         # YYYYJJJ e.g. 2001349
 setenv NDAYS 6          # $3         # e.g. 5 for 5 days
 setenv CASE DDM_99_ #
 setenv PERIOD NULL      # $5
@@ -34,21 +34,21 @@ setenv AFILE  CCTM_ddm_3.x_Linux2_x86_64pgi
 #################################################################
 
 
-setenv INFILE1  $OUTDIR/DDM_99_1/$AFILE.DDM_99_1.ASENS.$JDATE.combine.ncf
-setenv INFILE2  $OUTDIR/DDM_99_2/$AFILE.DDM_99_2.ASENS.$JDATE.combine.ncf
-setenv INFILE3  $OUTDIR/DDM_99_3/$AFILE.DDM_99_3.ASENS.$JDATE.combine.ncf
-setenv INFILE4  $OUTDIR/DDM_99_4/$AFILE.DDM_99_4.ASENS.$JDATE.combine.ncf
-setenv INFILE5  $OUTDIR/DDM_99_5/$AFILE.DDM_99_5.ASENS.$JDATE.combine.ncf
-setenv INFILE6  $OUTDIR/DDM_99_6/$AFILE.DDM_99_6.ASENS.$JDATE.combine.ncf
-setenv INFILE7  $OUTDIR/DDM_99_7/$AFILE.DDM_99_7.ASENS.$JDATE.combine.ncf
-setenv INFILE8  $OUTDIR/DDM_99_8/$AFILE.DDM_99_8.ASENS.$JDATE.combine.ncf
-setenv INFILE9  $OUTDIR/DDM_99_9/$AFILE.DDM_99_9.ASENS.$JDATE.combine.ncf
-setenv INFILE10 $OUTDIR/DDM_99_10/$AFILE.DDM_99_10.ASENS.$JDATE.combine.ncf
-setenv INFILE11 $OUTDIR/DDM_99_11/$AFILE.DDM_99_11.ASENS.$JDATE.combine.ncf
-setenv INFILE12 $OUTDIR/DDM_99_12/$AFILE.DDM_99_12.ASENS.$JDATE.combine.ncf
-setenv INFILE13 $OUTDIR/DDM_99_13/$AFILE.DDM_99_13.ASENS.$JDATE.combine.ncf
+setenv INFILE1  ${OUTDIR}DDM_99_1/$AFILE.DDM_99_1.ASENS.$JDATE.combine.ncf
+setenv INFILE2  ${OUTDIR}DDM_99_2/$AFILE.DDM_99_2.ASENS.$JDATE.combine.ncf
+setenv INFILE3  ${OUTDIR}DDM_99_3/$AFILE.DDM_99_3.ASENS.$JDATE.combine.ncf
+setenv INFILE4  ${OUTDIR}DDM_99_4/$AFILE.DDM_99_4.ASENS.$JDATE.combine.ncf
+setenv INFILE5  ${OUTDIR}DDM_99_5/$AFILE.DDM_99_5.ASENS.$JDATE.combine.ncf
+setenv INFILE6  ${OUTDIR}DDM_99_6/$AFILE.DDM_99_6.ASENS.$JDATE.combine.ncf
+setenv INFILE7  ${OUTDIR}DDM_99_7/$AFILE.DDM_99_7.ASENS.$JDATE.combine.ncf
+setenv INFILE8  ${OUTDIR}DDM_99_8/$AFILE.DDM_99_8.ASENS.$JDATE.combine.ncf
+setenv INFILE9  ${OUTDIR}DDM_99_9/$AFILE.DDM_99_9.ASENS.$JDATE.combine.ncf
+setenv INFILE10 ${OUTDIR}DDM_99_10/$AFILE.DDM_99_10.ASENS.$JDATE.combine.ncf
+setenv INFILE11 ${OUTDIR}DDM_99_11/$AFILE.DDM_99_11.ASENS.$JDATE.combine.ncf
+setenv INFILE12 ${OUTDIR}DDM_99_12/$AFILE.DDM_99_12.ASENS.$JDATE.combine.ncf
+setenv INFILE13 ${OUTDIR}DDM_99_13/$AFILE.DDM_99_13.ASENS.$JDATE.combine.ncf
 
-setenv OUTFILE $POSTDIR/$AFILE.$CASE.ASENS.$JDATE.combine.ncf
+setenv OUTFILE $POSTDIR/$AFILE.DDM_ALL.ASENS.$JDATE.combine.ncf
 if (-e $OUTFILE) /bin/rm $OUTFILE
 
 setenv SPECIES_DEF $DIR/species_def_allapts.conc
